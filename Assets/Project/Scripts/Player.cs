@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
   private Vector3 moveDelta;
 
+  public float boatSpeed;
+
   // Use this for initialization
   private void Start()
   {
@@ -30,7 +32,7 @@ public class Player : MonoBehaviour
       transform.localScale = new Vector3(-1, 1, 1);
 
     // Move player
-    transform.Translate(moveDelta * Time.deltaTime);
+    transform.Translate(moveDelta * Time.deltaTime * boatSpeed);
 
     Debug.Log(x);
     Debug.Log(y);
